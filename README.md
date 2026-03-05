@@ -5,9 +5,9 @@ A distributed system project demonstrating a high-performance **Go Load Balancer
 ### 🌌 System Architecture
 This project bridges modern systems programming (Go) with enterprise web standards (Java Jakarta EE).
 
-### 📊 Full-Stack Architecture flow
+### 📊 Full-Stack Architecture Flow
 
-\`\`\`mermaid
+```mermaid
 graph TD
     User((User/Browser)) -->|Port 8080| LB[Go Load Balancer]
     
@@ -29,7 +29,6 @@ graph TD
     style J fill:#f89820,stroke:#333,stroke-width:2px,color:#fff
     style DB fill:#4479A1,stroke:#333,stroke-width:1px,color:#fff
     style G fill:#00ADD8,stroke:#333,stroke-width:2px,color:#fff
-\`\`\`
 
 * **The Front Door:** Go Load Balancer (Port 8080) - [Go Logic Details](./go-backend/README.md)
 * **Backend Instance 1:** Java JSP/Servlet on Tomcat (Port 8081) - [Java Logic Details](./java-backend/README.md)
