@@ -63,3 +63,13 @@ This system is designed to be cross-platform. Ensure you have the following base
 
 ### 3. Containerization (Optional but Recommended)
 * **Docker Desktop** (Mac/Windows) or **Docker Engine** (Linux) to run the entire stack via one command.
+
+## 🛠️ Developer's Notes & "Real-World" Considerations
+
+While this project is a fully functional distributed system, it was built as a deep-dive into **Infrastructure Logic** and **Cross-Runtime Communication**. Here is how this would differ in a modern production environment:
+
+* **The "JSP" Reality:** I chose **JSP/Servlets** to understand the fundamental request-response lifecycle of the Java ecosystem. In a modern 2026 production environment, I would replace this with a **Spring Boot/Quarkus** REST API and a decoupled frontend (React/Next.js).
+* **Database Scaling:** This system uses an **H2 In-Memory Database** for zero-config portability. For a production CRUD application, a persistent RDBMS like **PostgreSQL** or **MySQL** would be used, likely managed via an ORM like Hibernate or Go's GORM.
+* **Load Balancing:** The Go Load Balancer here is a "from-scratch" implementation of a **Round Robin** algorithm. In enterprise-grade infra, one might use **Nginx**, **HAProxy**, or **AWS ELB**, but building it in Go proves an understanding of how those tools work under the hood.
+* **Security:** This project prioritizes architectural clarity over security hardening. Production apps would require **JWT/OAuth2** for auth and **TLS/SSL** for all container-to-container traffic.
+
