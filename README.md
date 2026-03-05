@@ -9,7 +9,9 @@ This project bridges modern systems programming (Go) with enterprise web standar
 * **Backend Instance 1:** Java JSP/Servlet on Tomcat (Port 8081) - [Java Logic Details](./java-backend/README.md)
 * **Backend Instance 2:** Go Native Microservice (Port 8082) - Serving as a fallback/secondary node.
 
-
+### 📂 Explore the Codebase
+* [**Java Backend** (Jakarta EE/Tomcat)](./java-backend) — View the core business logic and JSP templates.
+* [**Go Infrastructure** (Load Balancer)](./go-backend) — View the networking logic, health checks, and goroutines.
 
 ### 🛠️ Key Infra Features
 1. **Dynamic Rerouting:** If the Java Tomcat server is killed, the Load Balancer detects the failure within 5 seconds and automatically reroutes all traffic to the Go backend.
