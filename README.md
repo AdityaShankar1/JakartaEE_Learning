@@ -1,6 +1,6 @@
 # 🏗️ Go-Infra-LoadBalancer
 
-A distributed system project demonstrating a high-performance **Go Load Balancer** sitting in front of a **Java (JSP/Servlet) Backend**.
+A distributed system project demonstrating a high-performance **Golang Load Balancer** sitting in front of a **Java (JSP/Servlet) Backend**.
 
 ### 🌌 System Architecture
 This project bridges modern systems programming (Go) with enterprise web standards (Java Jakarta EE).
@@ -43,3 +43,23 @@ graph TD
 1. **Dynamic Rerouting:** If the Java Tomcat server is killed, the Load Balancer detects the failure within 5 seconds and automatically reroutes all traffic to the Go backend.
 2. **Cross-Language Proxying:** Demonstrates the ability to manage traffic between different language runtimes (JVM and Go Binary).
 3. **Concurrency Control:** Utilizes Go's concurrency primitives to handle health checks without blocking incoming user requests.
+
+## 🛠️ Prerequisites & Setup
+
+This system is designed to be cross-platform. Ensure you have the following based on your OS:
+
+### 1. Infrastructure Layer (Go)
+* **Go 1.26+**: 
+  * **macOS**: `brew install go`
+  * **Windows**: Download the `.msi` from [golang.org](https://go.dev/dl/)
+  * **Linux (Ubuntu/Debian)**: `sudo apt install golang-go`
+
+### 2. Backend Layer (Java)
+* **OpenJDK 21+**: 
+  * **macOS/Linux**: Use `sdk install java 21-open` (via SDKMAN!)
+  * **Windows**: Download from [Adoptium (Eclipse Temurin)](https://adoptium.net/)
+* **Apache Tomcat 11**: Required for Jakarta EE 11 support. 
+* **Maven**: To build the `.war` file for the Java backend.
+
+### 3. Containerization (Optional but Recommended)
+* **Docker Desktop** (Mac/Windows) or **Docker Engine** (Linux) to run the entire stack via one command.
