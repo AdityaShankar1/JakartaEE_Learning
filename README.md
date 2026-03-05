@@ -1,4 +1,4 @@
-# 🏗️ Go-Infra-LoadBalancer
+# 🏗️ Jakarta EE Learning + Golang LoadBalancer
 
 A distributed system project demonstrating a high-performance **Golang Load Balancer** sitting in front of a **Java (JSP/Servlet) Backend**.
 
