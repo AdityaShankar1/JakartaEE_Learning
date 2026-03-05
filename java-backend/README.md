@@ -85,6 +85,29 @@ It is NOT:
 
 <img width="1265" height="767" alt="image" src="https://github.com/user-attachments/assets/863a295b-fc64-4418-aacd-e28177f74929" />
 
-## Notes:
-This was tested on FireFox (Gecko Browser Engine) and on Safari (Apple WebKit).
-It uses H2 Database, you might want to use MySQL or PostgreSQL for a more realistic CRUD implementation. 
+---
+
+## 📜 License & Disclaimer
+
+**Usage for Learning Only**
+This project is provided "as-is" for educational and portfolio purposes. 
+
+1.  **Liability:** The author is not responsible for any security vulnerabilities, data loss, or system instability caused by running this code on your machine or server.
+2.  **Legacy Code:** Components (like JSP) are included for historical/educational context and may contain inherent vulnerabilities that are not patched for production use.
+
+---
+
+## 🔑 Test Credentials
+
+Since this is a demonstration of an integrated system, the database is pre-seeded with a test user. Use the following credentials to bypass the login screen and interact with the Java/H2 backend:
+
+| Role | Username | Password |
+| :--- | :--- | :--- |
+| **Admin/Test User** | `aditya` | `java25` |
+
+### 🔍 How to Verify the Flow:
+1.  Navigate to `http://localhost:8080` (The Load Balancer).
+2.  Enter the credentials above.
+3.  Upon success, the **Go Load Balancer** will have successfully proxied your request, and the **Java Backend** will have authenticated you against the **H2 Database**.
+
+> **⚠️ Production Note:** In a real-world scenario, credentials would never be hardcoded or stored in plaintext. This project uses a pre-seeded H2 in-memory database for ease of demonstration and recruitment review.
