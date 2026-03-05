@@ -1,0 +1,14 @@
+services:
+  java-app:
+    build: ./java-backend
+    ports:
+      - "8081:8080" # Maps container's 8080 to host's 8081
+
+  go-lb:
+    build: ./go-backend
+    ports:
+      - "8080:8080" # Maps LB front-door to host 8080
+    depends_on:
+      - java-app
+    environment:
+      - JAVA_BACKEND_URL=http://java-app:8080
