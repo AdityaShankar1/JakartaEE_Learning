@@ -5,7 +5,7 @@ A distributed system project demonstrating a high-performance **Go Load Balancer
 ### 🌌 System Architecture
 This project bridges modern systems programming (Go) with enterprise web standards (Java Jakarta EE).
 
-### 📊 Full-Stack Architecture Flow
+### 📊 Full-Stack Architecture Flow:
 
 ```mermaid
 graph TD
